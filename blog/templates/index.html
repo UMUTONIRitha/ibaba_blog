@@ -1,1 +1,89 @@
-<h1> Django Tutorial</h1>
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+{{block.super}}
+<style>
+    
+.mouse-animation{
+    padding-top: 100px;
+    margin-left:630px;
+}
+
+.mouse-animation{
+    animation: bounce 2.6s infinite;
+  }
+  @keyframes bounce {
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-55px);
+    }
+    60% {
+      transform: translateY(-60px);
+    }
+  }
+  .order-content{
+    background-attachment: fixed;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.footer-content{
+    text-align: center;
+    padding-top: 60px;
+    font-family: 'Secular One', sans-serif;
+}
+.about-p{
+    width: 50%;
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+.about{
+    width: 100%;
+    height: 450px;
+}
+.container-story{
+  margin-top: 8%;
+}
+
+</style>
+
+<div class="order-content">
+  <h3>STORIES</h3>
+  <div class="row row-cols-1 row-cols-md-6">
+    {% for pro in all_projects %}
+      <div class="col-md-4 " style="padding-top: 100px;">
+          <div class="card h-50">
+            
+              <img src="{{pro.project_image.url}}" class="card-img-top" alt="Image"  width="100%">
+       
+            
+                <p class="card-title"><strong>"{{pro.title}}"</strong></p>
+                <a href="{% url 'oneproject' pro.id %}" style="color: black; text-align: center;">Read Story..</a>
+             
+          </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+
+
+
+
+
+     
+</div>
+{% endblock %}
+{% block scripts %}
+{{block.super}}
+<script type="text/javascript" src="{%static 'js/newsletter.js'%}">
+</script>
+{% endblock %}
