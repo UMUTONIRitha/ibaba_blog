@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ibaba',
         'USER': 'wecode',
-    'PASSWORD':'12345',
+    'PASSWORD':'123456',
     }
 }
 

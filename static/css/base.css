@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 36px;
+    color: #555;
+    font-weight: bold;
+    font-family: 'Abril Fatface', cursive;
+}
+
+h1::after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 110px;
+    margin: 10px auto;
+}
+
+.card-body h4 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h5 {
+    font-size: 15px;
+    font-style: italic;
+}
+
+h5::after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 30px;
+    margin: 10px auto;
+}
+
+#team img {
+    margin-top: -50px;
+}
+
+#team i {
+    font-size: 18px;
+    color: #555;
+}
+
+#team p {
+    font-weight: 500;
+}
+
+#team .card {
+    border-radius: 0;
+    box-shadow: 5px 5px 15px #111;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+#team .card:hover {
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 5px 5px 10px #9E9E9E;
+}
+
+#team .card:hover h4, #team .card:hover i {
+    color: #fff;
+}
+
+.alicee {
+    color: #d9d9d9;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+footer {
+    bottom: 0px;
+    width: 100%;
+    background-color: #111;
+}
+
+.main-content {
+    display: flex;
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content:before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+.box .content:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #fff;
+    top: -10px;
+}
+
+.left .content p {
+    text-align: justify;
+}
+
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+    padding: 0 2px;
+    color: #fff;
+}
+
+.left .content .social a span {
+    font-size: 1rem;
+    background: #1a1a1a;
+    height: 40px;
+    width: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.left .content .social a span:hover {
+    color: black;
+    background: #fff;
+}
+
+.center .content .fas {
+    font-size: 1rem;
+    background: #1a1a1a;
+    height: 40px;
+    width: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover {
+    color: black;
+    background: #fff;
+}
+
+.center .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone {
+    margin: 15px 0;
+}
+
+.right form .text {
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+}
+
+.right form .msg {
+    margin-top: 10px;
+}
+
+.right form input, .right form textarea {
+    width: 100%;
+    font-size: 1.0625rem;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+
+.right form input:focus, .right form textarea:focus {
+    outline-color: #111;
+}
+
+.right form input {
+    height: 35px;
+}
+
+input[type=text] {
+    color: black;
+}
+
+.right form .btn {
+    margin-top: 10px;
+}
+
+.right form .btn button {
+    height: 30px;
+    width: 200%;
+    border: 1px solid #fff;
+    /* outline: none; */
+    background: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.right form .btn button:hover {
+    background: #fff;
+    color: black;
+}
+
+.bottom center {
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: black;
+}
+
+.bottom center span {
+    color: #656565;
+}
+
+.bottom center a {
+    color: #656565;
+    text-decoration: none;
+}
+
+.bottom center a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 900px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box {
+        margin: 5px 0;
+    }
+}
+
+.texttt h6 {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.texttt h6::after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 40px;
+    margin: 10px auto;
+}
+
+.wedo {
+    text-align: center;
+}
+
+.computer {
+    background-image: url("https://res.cloudinary.com/zilfa/image/upload/v1620392587/service-background_jqzjpk.jpg");
+    background-size: cover;
+    margin-top: 40px;
+    height: 60vh;
+}
+
+#service {
+    text-align: center;
+    color: white;
+    padding: 70px 0;
+}
+
+
+#service h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+.textcolor{
+    color: #555;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.bg-dark{
+    background-color: black !important;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-item{
+    margin: 0 15px;
+}
+
+
+.carousel-item{
+    height: 92vh;
+    min-height: 200px;
+    background:no-repeat scroll center scroll;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+  
+  .carousel-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.4;
+  }
+  
+  .carousel-caption{
+    bottom: 270px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .carousel-caption h5{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'RocknRoll One', sans-serif;
+  }
+  
+  .carousel-caption p{
+    font-size: 18px;
+    top: 2rem;
+  }
