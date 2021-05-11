@@ -45,6 +45,46 @@ $("#imgProc").click(function () {
 });
 
 
+$(document).ready(function(){
+    $(".button").click(function(){
+        var value =$(this).attr("data-filter");
+        if(value=="all"){
+            $(".filter").show("100");
+        }
+        else{
+            $(".filter").not("."+value).hide("1000");
+            $(".filter").filter("."+value).show("1000");
+        }
+        $("ul .button").click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    })
+})
+
+
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            setting: {
+                slidesToShow: 4 
+            }
+        }, {
+            breakpoint:520,
+            setting: {
+                slidesToShow: 3
+            }
+        }]
+
+    });
+});
 
 
 $("#submit").click(function () {
